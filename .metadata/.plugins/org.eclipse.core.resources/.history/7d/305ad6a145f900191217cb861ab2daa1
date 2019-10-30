@@ -1,0 +1,21 @@
+Feature: Dem web shop login
+@login
+  Scenario Outline: Successful login
+    Given User is on demo web shop page
+    And Choose to click on login
+    When User enter "<email>" and "<password>" 
+    And clicks on login button
+    Then he will be taken to home page
+   
+   Examples:
+   |email | password |
+   |karthik456@gmail.com  |karthik456 |
+   |anikhil@gmail.com  |nikhil123 |
+   |aprabha@gmail.com  |prabha123 |
+@search
+  Scenario: Successful search of product
+    Given again User is  on demo web shop 
+    And chooses to find product
+    When user clicks on search products 
+    And he will be able to list of products
+    

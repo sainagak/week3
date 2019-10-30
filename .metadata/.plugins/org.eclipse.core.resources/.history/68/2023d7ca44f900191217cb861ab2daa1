@@ -1,0 +1,15 @@
+Feature: Title of your feature
+  I want to use this template for my feature file
+
+ @login
+  Scenario Outline : Successful login
+    Given  User is on demo web shop page
+    And Choose to click on login
+    When User enter "<email>" and "<password>" 
+    And clicks on login button
+    Then he will be taken to home page
+  Examples:
+   |email | password |
+  |karthik456@gmail.com  |karthik456 |
+   |anikhil@gmail.com  |nikhil123 |
+   |aprabha@gmail.com  |prabha123 |

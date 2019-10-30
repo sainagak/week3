@@ -1,0 +1,30 @@
+package MyDemo.MyDemo;
+
+import org.testng.annotations.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.annotations.DataProvider;
+
+public class DPdemo {
+  WebDriver driver;
+	@Test(dataProvider = "dp")
+  public void f(String u, String p) {
+		driver=MyDriver.getDriver("CRM");
+		driver.get("http://newtours.demoaut.com/");
+		WebElement uname=driver.findElement(By.name("userName"));
+		uname.sendKeys(u);
+		WebElement pas=driver.findElement(By.name("password"));
+		pas.sendKeys(p);
+		WebElement sign=driver.findElement(By.name("login")).click();
+		driver.close();
+  }
+
+  @DataProvider
+  public Object[][] dp() {
+    return new Object[][] {
+      new Object[] { "demo", "demo" },
+      new Object[] { "mercury", "mercury" },
+    };
+  }
+}

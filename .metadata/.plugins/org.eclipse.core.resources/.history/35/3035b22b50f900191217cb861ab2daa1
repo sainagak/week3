@@ -1,0 +1,14 @@
+Feature: demo web shop sucessful registration
+
+  @login
+  Scenario Outline: Succesful registration into demo web shop 
+    Given user is on demo web shop page 
+    And clicks on "<register>" 
+    When user enters "<gender>" and  "<fname>" and "<lname>" and "<email>" and "<pwd>" and "<cpwd>" to register
+     And  user clicks on "<submit>" 
+    Then verifying the registration
+    
+    Examples:
+    | male | sampath	|kinnera | xysampath@gmail.com	| kinnera123	| kinnera123	|
+    | male | ganesh |sai  | xyganesh@gmail.com	| ganesh123	| ganesh123	|
+

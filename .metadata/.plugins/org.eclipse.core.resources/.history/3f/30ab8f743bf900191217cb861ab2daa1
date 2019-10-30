@@ -1,0 +1,12 @@
+
+Feature: Dem web shop login
+
+  Scenario: Successful login
+    Given User is on demo web shop page
+    And Choose to click on login
+    When User eneter email id and password 
+    And clicks on login button
+    Then he will be taken to home page
+   
+
+  

@@ -1,0 +1,69 @@
+package MyDemo.MyDemo;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.Test;
+
+public class Actionsdemo {
+  
+	WebDriver driv;
+
+	@Test 
+  public void f() throws InterruptedException {
+	  driv=MyDriver.getDriver("CRM");
+	  driv.get("http://demowebshop.tricentis.com/login");
+	  WebElement trgt=driv.findElement(By.xpath("//input[@value='Search store']"));
+	  
+	  Actions act1 = new  Actions(driv);
+	  act1.keyDown(trgt,Keys.CONTROL).sendKeys("COMPUTER").keyUp(Keys.CONTROL).build().perform();
+	  //act1.sendKeys("COMPUTER");
+	  Thread.sleep(2000);
+	  act1.sendKeys(Keys.DOWN).sendKeys(Keys.DOWN).sendKeys(Keys.DOWN).sendKeys(Keys.ENTER).build().perform();
+	  
+  
+	}@Test (enabled=false)
+	 public void Hovering() throws InterruptedException {
+		  driv=MyDriver.getDriver("CRM");
+		  driv.get("https://www.spicejet.com/Default.aspx");
+		 driv.manage().window().maximize();
+		  WebElement trgt2=driv.findElement(By.xpath("//a[text()='Add-Ons']"));
+		  WebElement trgt3=driv.findElement(By.xpath("//a[text()='MyFlexiPlan']"));
+		
+		  
+		  Actions act1 = new  Actions(driv);
+		   act1.moveToElement(trgt2).build().perform();
+		 Thread.sleep(2000);		 
+		 act1.moveToElement(trgt3).build().perform();
+		// trgt3.click();
+		 WebElement check=driv.findElement(By.xpath("//input[@id='ctl00_mainContent_chk_friendsandfamily']")); 
+		 WebElement drop=driv.findElement(By.xpath("//input[@name='ctl00_mainContent_ddl_originStation1_CTXT']"));
+		// WebElement buttn=driv.findElement(By.xpath("//*[@id='flightSearchContainer']/div[4]/butto")); 
+		System.out.println(" selected checkbox is "+check.isSelected());
+		System.out.println(" dropdown is visible "+drop.isDisplayed());
+		//System.out.println("the selected checkbox is "+buttn.isEnabled());
+		
+		  
+	  
+		}@Test (enabled=false)
+	 public void DDrop() throws InterruptedException {
+			  driv=MyDriver.getDriver("CRM");
+			  driv.get("https://www.spicejet.com/Default.aspx");
+			 driv.manage().window().maximize();
+			 Thread.sleep(5000);
+				 
+			 
+			// trgt3.click();
+			 WebElement src=driv.findElement(By.xpath("//input[@id='ctl00_mainContent_chk_friendsandfamily']")); 
+			 WebElement dst=driv.findElement(By.xpath("//input[@name='ctl00_mainContent_ddl_originStation1_CTXT']"));
+			  Actions act3 = new  Actions(driv);
+			   act3.dragAndDrop(src, dst);
+			  
+			
+			//System.out.println("the selected checkbox is "+buttn.isEnabled());
+	
+}
+}

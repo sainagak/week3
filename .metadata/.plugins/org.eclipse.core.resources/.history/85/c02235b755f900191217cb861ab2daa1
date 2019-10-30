@@ -1,0 +1,19 @@
+Feature: successful login with registered credentials
+
+  @login
+  Scenario Outline: loggin with registered credentials
+    Given user is on demo web shop page
+    And clicks on login 
+    When user enters "<username>" and  "<pwd>" 
+    And he will be logged in
+    Then I validate the outcomes
+   
+
+  
+
+  Examples:
+      |username              |pwd         | 
+     | xysampath@gmail.com	| kinnera123	| 
+     | xyganesh@gmail.com  	| ganesh123	  |
+   
+  

@@ -1,0 +1,11 @@
+
+Feature: checking no of items in cart
+
+  @login
+  Scenario: cart is empty
+    Given alex is on demo web shop
+    And alex click on login
+    When alex enters credentials 
+    And alex clicks on login
+    Then alex clicks on shopping cart
+    And alex sees Your cart is empty

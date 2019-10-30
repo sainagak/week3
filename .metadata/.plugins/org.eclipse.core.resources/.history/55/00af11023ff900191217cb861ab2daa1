@@ -1,0 +1,51 @@
+package stepdefinition;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import junit.framework.Assert;
+
+public class Demoshop {
+WebDriver driv;
+@Given("User is on demo web shop page")
+public void user_is_on_demo_web_shop_page() {
+	System.setProperty("webdriver.chrome.driver","C:\\MyDrivers\\chromedriver.exe");
+	driv.get("C:\\MyDrivers\\chromedriver.exe");
+	
+}
+
+@Given("Choose to click on login")
+public void choose_to_click_on_login() {
+    WebElement login=driv.findElement(By.xpath("//a[text()='Log in']"));
+    login.click();
+	
+	
+}
+
+@When("User enter email id and password")
+public void user_enter_email_id_and_password() {
+	driv.findElement(By.xpath("//*[@id=\"Email\"]")).sendKeys("karthik456@gmail.com");
+	driv.findElement(By.xpath("//*[@id=\"Password\"]")).sendKeys("karthik456");
+   
+}
+
+@When("clicks on login button")
+public void clicks_on_login_button() {
+   
+	driv.findElement(By.xpath("//input[@value='Log in']")).click();
+	
+}
+
+@Then("he will be taken to home page")
+public void he_will_be_taken_to_home_page() throws InterruptedException {
+	boolean t=driv.findElement(By.xpath("//a[text()='karthik456@gmail.com")).isDisplayed();
+	Assert.assertTrue(t);
+	Thread.sleep(2000);
+	driv.close();
+}
+
+}

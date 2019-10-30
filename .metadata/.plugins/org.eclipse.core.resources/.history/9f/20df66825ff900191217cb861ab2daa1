@@ -1,0 +1,10 @@
+package casestudy4;
+
+import org.openqa.selenium.WebDriver;
+
+public class Case4 {
+WebDriver driv;
+
+
+
+}

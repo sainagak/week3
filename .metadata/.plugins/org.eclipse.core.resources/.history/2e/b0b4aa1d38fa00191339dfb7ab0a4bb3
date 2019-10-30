@@ -1,0 +1,64 @@
+package cucumber.jenkins;
+
+public class Testjen {
+	
+	@Given("karthik launched chrome browser")
+	public void karthik_launched_chrome_browser() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new cucumber.api.PendingException();
+	}
+
+	@Given("launched demo url")
+	public void launched_demo_url() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new cucumber.api.PendingException();
+	}
+
+	@When("clicked on login")
+	public void clicked_on_login() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new cucumber.api.PendingException();
+	}
+
+	@When("and provided valid credentials")
+	public void and_provided_valid_credentials() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new cucumber.api.PendingException();
+	}
+
+	@Then("he should see home page")
+	public void he_should_see_home_page() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new cucumber.api.PendingException();
+	}
+
+	@When("karthik enter {string} and {string} and  {string} and  {string}")
+	public void karthik_enter_and_and_and(String string, String string2, String string3, String string4) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new cucumber.api.PendingException();
+	}
+
+	@When("clicks on rgister")
+	public void clicks_on_rgister() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new cucumber.api.PendingException();
+	}
+
+	@Then("he should see homepage with registration successful")
+	public void he_should_see_homepage_with_registration_successful() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new cucumber.api.PendingException();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

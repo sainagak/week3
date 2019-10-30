@@ -1,0 +1,10 @@
+Feature: invalid cart value
+
+  Scenario: cart is empty
+    Given alex is on demo web shop
+    And alex click on login
+    When alex enters credentials 
+    And alex clicks on login
+    And alex clicks on shopping cart
+    Then alex sees Your cart is empty
+ 

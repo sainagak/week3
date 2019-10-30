@@ -1,0 +1,13 @@
+
+Feature: invalid cart value
+
+  @cart
+  Scenario: empty cart
+    Given alex  web demo shop page
+    And alex clicks on login link
+    When alex enters credentials in box
+    And alex logins and clicks on shoping cart
+    And alex will see your cart is empty 
+    
+
+  

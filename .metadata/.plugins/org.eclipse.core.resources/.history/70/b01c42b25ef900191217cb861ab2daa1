@@ -1,0 +1,12 @@
+
+Feature: checking no of items in cart
+
+  @cart
+  Scenario: cart is empty
+    Given alex is on demo web shop
+    And alex login to checkout
+    When alex clicks on  
+    And some other action
+    And yet another action
+    Then I validate the outcomes
+    And check more outcomes

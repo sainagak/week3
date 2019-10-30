@@ -1,0 +1,19 @@
+package casestudy4;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import cucumber.api.java.en.Given;
+
+public class Casestudy4 {
+WebDriver driv;
+
+@Given("user is on demo web shop page")
+public void user_is_on_demo_web_shop_page() {
+	System.setProperty("webdriver.chrome.driver", "C:\\MyDrivers\\chromedriver.exe");
+	driv=new ChromeDriver();
+	driv.navigate().to("http://demowebshop.tricentis.com/");
+	driv.manage().window().maximize();
+}
+
+}
